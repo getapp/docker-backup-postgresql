@@ -1,6 +1,4 @@
 Model.new(:postgresql, 'PostgreSQL backup') do
-  compress_with Gzip
-
   database PostgreSQL do |db|
     db.name               = ENV['POSTGRESQL_DATABASE']
     db.username           = ENV['POSTGRESQL_USER']
