@@ -5,7 +5,7 @@ Model.new(:postgresql, 'PostgreSQL backup') do
     db.password           = ENV['POSTGRESQL_PASSWORD']
     db.host               = ENV['POSTGRESQL_HOST']
     db.port               = ENV['POSTGRESQL_PORT']
-    db.additional_options = []
+    db.additional_options = ['-Fca', '--no-acl', '--no-owner']
   end
 
   store_with S3 do |s3|
