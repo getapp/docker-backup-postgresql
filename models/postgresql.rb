@@ -15,6 +15,6 @@ Model.new(:postgresql, 'PostgreSQL backup') do
     s3.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
     s3.region = ENV['AWS_REGION']
     s3.bucket = ENV['AWS_BUCKET']
-    s3.path = ENV['AWS_MYSQL_PATH']
+    s3.path = ENV['AWS_PATH']
   end
 end
